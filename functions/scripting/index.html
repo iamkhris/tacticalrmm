@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://wh1te909.github.io/tacticalrmm/functions/scripting/">
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.5">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ee0f47ba.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -878,6 +878,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../script_variables/" class="md-nav__link">
+        Reference: Script Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         Examples
       </a>
@@ -1562,14 +1576,14 @@
 <li>Python</li>
 </ul>
 </li>
-<li><strong>Script Arguments</strong> - Optional way to set default arguments for scripts. These will autopopulate when running scripts and can be changed at runtime.</li>
+<li><strong>Script Arguments</strong> - Optional way to set default arguments for scripts. These will auto populate when running scripts and can be changed at runtime.</li>
 <li><strong>Default Timeout</strong> - Sets the default timeout of the script and will stop script execution if the duration surpasses the configured timeout. Can be changed at script runtime</li>
 <li><strong>Favorite</strong> - Favorites the script.</li>
 </ul>
 <h2 id="downloading-scripts">Downloading Scripts<a class="headerlink" href="#downloading-scripts" title="Permanent link">&para;</a></h2>
 <p>To download a Tactical RMM Script, click on the script in the Script Manager to select it. Then click the <strong>Download Script</strong> button on the top. You can also right-click on the script and select download</p>
 <h2 id="community-scripts">Community Scripts<a class="headerlink" href="#community-scripts" title="Permanent link">&para;</a></h2>
-<p>These are script that are built into Tactical RMM. They are provided and mantained by the Tactical RMM community. These scripts are updated whenever Tactical RMM is updated and can't be modified or deleted in the dashboard.</p>
+<p>These are script that are built into Tactical RMM. They are provided and maintained by the Tactical RMM community. These scripts are updated whenever Tactical RMM is updated and can't be modified or deleted in the dashboard.</p>
 <h3 id="hiding-community-scripts">Hiding Community Scripts<a class="headerlink" href="#hiding-community-scripts" title="Permanent link">&para;</a></h3>
 <p>You can choose to hide community script throughout the dashboard by opening <strong>Script Manager</strong> and clicking the <strong>Show/Hide Community Scripts</strong> toggle button.</p>
 <h2 id="using-scripts">Using Scripts<a class="headerlink" href="#using-scripts" title="Permanent link">&para;</a></h2>
@@ -1582,7 +1596,8 @@
 <li><strong>Save as Note</strong> - Saves the output as a Note that can be views in the agent Notes tab</li>
 <li><strong>Collector</strong> - Saves to output to the specified custom field.</li>
 </ul>
-<p>There is also an option on the agent context menu called <strong>Run Favorited Script</strong>. This will essentially Fire and Forget the script with default args and timeout.</p>
+<p>There is also an option on the agent context menu called <strong>Run Favorited Script</strong>. This will pre-populate the script run dialog with the script of your choice.</p>
+<p><a href="../../howitallworks/#windows-agent">Script Execution Process</a></p>
 <h3 id="script-arguments">Script Arguments<a class="headerlink" href="#script-arguments" title="Permanent link">&para;</a></h3>
 <p>The <code>Script Arguments</code> field should be pre-filled with information for any script that can accept or requires parameters.</p>
 <p style="background-color:#1e1e1e;">
@@ -1594,7 +1609,7 @@
 <p>and <code>{}</code> indicates a parameter with several preconfigured parameter</p>
 <p>and <code>()</code> indicates a default parameter if none is specified</p>
 <h3 id="bulk-run-on-agents">Bulk Run on agents<a class="headerlink" href="#bulk-run-on-agents" title="Permanent link">&para;</a></h3>
-<p>There is also an option on the agent context menu called <strong>Run Favorited Script</strong>.</p>
+<p>Under the tools menu -&gt; Run Bulk Script you can execute scripts against Clients/Sites/Selected Agents/All based on All/Servers/Workstations</p>
 <h3 id="automated-tasks">Automated Tasks<a class="headerlink" href="#automated-tasks" title="Permanent link">&para;</a></h3>
 <p>Tactical RMM allows scheduling tasks to run on agents. This leverages the Windows Task Scheduler and has the same scheduling options.</p>
 <p>See <a href="../automated_tasks/">Automated Tasks</a> for configuring automated tasks</p>
@@ -1612,7 +1627,7 @@
 <p class="admonition-title">Info</p>
 <p>Everything between {{}} is CaSe sEnSiTive</p>
 </div>
-<p>See a full list of available options <a href="../../script_variables/">Here</a></p>
+<p>See a full list of possible built-in variables <a href="../../script_variables/">Here</a></p>
 <h3 id="getting-custom-field-values">Getting Custom Field values<a class="headerlink" href="#getting-custom-field-values" title="Permanent link">&para;</a></h3>
 <p>Tactical RMM supports pulling data from custom fields using the {{model.custom_field_name}} syntax.</p>
 <p>See <a href="../custom_fields/#Using Custom Fields in Scripts">Using Custom Fields in Scripts</a></p>
@@ -1734,10 +1749,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.b6ff8c07.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5e13d264.min.js"></script>
       
     
   </body>

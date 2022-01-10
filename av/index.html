@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://wh1te909.github.io/tacticalrmm/av/">
       
       <link rel="icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.5">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ee0f47ba.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -692,6 +692,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../script_variables/" class="md-nav__link">
+        Reference: Script Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../functions/examples/" class="md-nav__link">
         Examples
       </a>
@@ -784,6 +798,33 @@
   <a href="#webroot" class="md-nav__link">
     Webroot
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sophos" class="md-nav__link">
+    Sophos
+  </a>
+  
+    <nav class="md-nav" aria-label="Sophos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sophos-central-admin" class="md-nav__link">
+    Sophos Central Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sophos-xg-firewall" class="md-nav__link">
+    Sophos XG Firewall
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1250,6 +1291,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sophos" class="md-nav__link">
+    Sophos
+  </a>
+  
+    <nav class="md-nav" aria-label="Sophos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sophos-central-admin" class="md-nav__link">
+    Sophos Central Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sophos-xg-firewall" class="md-nav__link">
+    Sophos XG Firewall
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1279,6 +1347,64 @@
 <p><img alt="Web Exclusions" src="../images/avwebroot3.png" /></p>
 <p><img alt="Web Exclusions" src="../images/avwebroot2.png" /></p>
 <p><img alt="Web Exclusions" src="../images/avwebroot1.png" /></p>
+<h2 id="sophos">Sophos<a class="headerlink" href="#sophos" title="Permanent link">&para;</a></h2>
+<h3 id="sophos-central-admin">Sophos Central Admin<a class="headerlink" href="#sophos-central-admin" title="Permanent link">&para;</a></h3>
+<p>Go To Global Settings &gt;&gt; General &gt;&gt; Global Exclusions &gt;&gt; Add Exclusion</p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen1.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen2.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen3.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen4.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen5.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen6.png" /></p>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen7.png" /></p>
+<h3 id="sophos-xg-firewall">Sophos XG Firewall<a class="headerlink" href="#sophos-xg-firewall" title="Permanent link">&para;</a></h3>
+<p><img alt="Agent Exclusions" src="../images/sophoscascreen1.png" /></p>
+<p>Log into Sophos Central Admin</p>
+<p>Admin URL: <a href="https://cloud.sophos.com/">https://cloud.sophos.com/</a></p>
+<p>Log into the Sophos XG Firewall</p>
+<p>Go To System &gt;&gt; Hosts and services &gt;&gt; FQDN Host Group and create a new group</p>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen1.png" /></p>
+<p>Go To System &gt;&gt; Hosts and services &gt;&gt; FQDN Host</p>
+<p>Create the following 3 hosts and add each to your FQDN host group.</p>
+<ul>
+<li>api.yourdomain.com</li>
+<li>mesh.yourdomain.com</li>
+<li>rmm.yourdomain.com (Optional if you want your client to have GUI access to Tactical RMM)</li>
+</ul>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen2.png" /></p>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen3.png" /></p>
+<p>Go To Hosts and services &gt;&gt; Services and create the following services</p>
+<ul>
+<li>Name: Tactical-Service-4222<ul>
+<li>Protocol: TCP</li>
+<li>Source port: 1:65535</li>
+<li>Destination port: 4222</li>
+</ul>
+</li>
+<li>Name: Tactical-Service-443<ul>
+<li>Protocol: TCP</li>
+<li>Source port: 1:65535</li>
+<li>Destination port: 443</li>
+</ul>
+</li>
+</ul>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen4.png" /></p>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen5.png" /></p>
+<p>Go To Hosts and services &gt;&gt; Service group and create the following service group</p>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen6.png" /></p>
+<p>Go To Protect &gt;&gt; Rules and policies and add a firewall rule</p>
+<ul>
+<li>Rule name: Tactical Rule</li>
+<li>Rule position: Top</li>
+<li>Source zones: LAN</li>
+<li>Source networks: ANY</li>
+<li>Destination zones: WAN</li>
+<li>Destination networks: Your FQDN Host Group</li>
+<li>Services: Tactical Services</li>
+</ul>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen7.png" /></p>
+<p><img alt="FW Exclusions" src="../images/sophosxgscreen8.png" /></p>
+<p>Optionally select Log Firewall Traffic checkbox for troubleshooting.</p>
 
               
             </article>
@@ -1357,10 +1483,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b6ff8c07.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.5e13d264.min.js"></script>
       
     
   </body>
